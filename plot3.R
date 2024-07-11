@@ -7,7 +7,8 @@ data <- read.csv("household_power_consumption.txt", sep=";")
 subset_data <- data[which( data$Date %in%  valid_dates), ]
 
 png("plot3.png")
-with(subset_data, plot(Sub_metering_1, type = "l",  xaxt = "n", ylab = "Energy sub metering"))
+with(subset_data, plot(Sub_metering_1, type = "l",  xaxt = "n", 
+                       xlab = "", ylab = "Energy sub metering"))
 
 with(subset_data, points(Sub_metering_2, type = "l", col = "red"))
 with(subset_data, points(Sub_metering_3, type = "l", col = "blue"))

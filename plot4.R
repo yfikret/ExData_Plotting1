@@ -21,7 +21,8 @@ axis(1, c(0, x_axis_length / 2, x_axis_length), labels = c("Thu", "Fri", "Sat"))
 
 # Subplot 2
 
-with(subset_data, plot(Sub_metering_1, type = "l",  xaxt = "n", ylab = "Energy sub metering"))
+with(subset_data, plot(Sub_metering_1, type = "l",  xaxt = "n", 
+                       xlab = "", ylab = "Energy sub metering"))
 
 with(subset_data, points(Sub_metering_2, type = "l", col = "red"))
 with(subset_data, points(Sub_metering_3, type = "l", col = "blue"))
